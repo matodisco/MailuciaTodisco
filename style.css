@@ -399,7 +399,6 @@ body{
   overflow: hidden;
   height: 450px;
   position: relative;
-  background: #000;
   display: flex;
 }
 
@@ -410,6 +409,8 @@ body{
   display: block;
   transition: transform 0.6s ease;
   will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .card:hover img {
@@ -508,12 +509,20 @@ textarea{
   min-height:120px;
 }
 
-button{
-  padding:15px;
-  background:white;
-  border:none;
-  font-weight:600;
-  cursor:pointer;
+.contact button {
+  padding: 15px;
+  background: var(--burgundy);
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.contact button:hover {
+  background: white;
+  color: var(--burgundy);
 }
 
 /* ================= RESPONSIVE ================= */
