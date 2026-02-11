@@ -577,3 +577,30 @@ button{
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .slider-container {
+    overflow-x: auto;
+  }
+
+  .slider {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .slide-group {
+    display: flex;
+    min-width: 100%;
+  }
+
+  .card {
+    min-width: 100%;
+    scroll-snap-align: start;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+}
